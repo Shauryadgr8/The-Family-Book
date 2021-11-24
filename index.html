@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>The Family Book</title>
+    </head>
+    <body style="text-align: center;">
+        <h1 style="margin-bottom: 75px;">The Family Book</h1>
+        <img src="Family Book.jpg" id="family-member-image" height="500px" width="300px">
+        <br>
+        <h3 id="family-member-name">The Family Book</h3>
+        <br>
+        <button style="margin-top: 75px;" onclick="next_member()">Next</button>
+        <script>
+            var images = [
+                "Baby.jfif",
+                "Boy.jfif",
+                "Mommy.png",
+                "Daddy.jpg"
+            ];
+            var names = [
+                "Veer Garg",
+                "Shaurya Garg",
+                "Dr. Surabhi Agarwal",
+                "Dr. Bhavuk Garg"
+            ];
+            var i = 0;
+            function next_member() {
+                i++;
+                var number_of_people = 3;
+                if(i > number_of_people)
+                (
+                    i = 0
+                );
+                var next_image = images[i];
+                var next_name = names[i];
+                document.getElementById("family-member-image").src = next_image;
+                document.getElementById("family-member-name").innerHTML = next_name;
+            }
+        </script>
+    </body>
+</html>
